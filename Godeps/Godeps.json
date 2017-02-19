@@ -1,0 +1,28 @@
+{
+	"ImportPath": "github.com/vatdaell/qrify",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.3.0",
+			"Rev": "392c28fe23e1c45ddba891b0320b3b5df220beea"
+		},
+		{
+			"ImportPath": "github.com/skip2/go-qrcode",
+			"Rev": "cf02323edc040f5263d08b45a60bc8abdc3bde18"
+		},
+		{
+			"ImportPath": "github.com/skip2/go-qrcode/bitset",
+			"Rev": "cf02323edc040f5263d08b45a60bc8abdc3bde18"
+		},
+		{
+			"ImportPath": "github.com/skip2/go-qrcode/reedsolomon",
+			"Rev": "cf02323edc040f5263d08b45a60bc8abdc3bde18"
+		},
+		{
+			"ImportPath": "gopkg.in/unrolled/render.v1",
+			"Rev": "50716a0a853771bb36bfce61a45cdefdb98c2e6e"
+		}
+	]
+}
