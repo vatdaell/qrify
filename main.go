@@ -2,10 +2,9 @@ package main
 
 import (
 	"net/http"
+	"os"
 
 	render "gopkg.in/unrolled/render.v1"
-
-	"log"
 
 	"github.com/gorilla/mux"
 	qrcode "github.com/skip2/go-qrcode"
@@ -17,7 +16,7 @@ func main() {
 	m.HandleFunc("/", IndexHandler)
 	m.HandleFunc("/qrify", QRHandler)
 	http.Handle("/", m)
-	log.Fatal(http.ListenAndServe(":6932", nil))
+	http.ListenAndServe(os.Getenv("PORT"), nil)
 }
 
 func IndexHandler(w http.ResponseWriter, req *http.Request) {
