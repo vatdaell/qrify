@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 
 	render "gopkg.in/unrolled/render.v1"
 
@@ -17,7 +18,7 @@ func main() {
 	m.HandleFunc("/", IndexHandler)
 	m.HandleFunc("/qrify", QRHandler)
 	http.Handle("/", m)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(os.Getenv("PORT"), nil))
 }
 
 func IndexHandler(w http.ResponseWriter, req *http.Request) {
